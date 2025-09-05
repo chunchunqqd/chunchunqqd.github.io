@@ -1,4 +1,5 @@
-        /* WordPress 兼容樣式 - 限制作用域避免影響頁面其他元素 */
+@charset "UTF-8"
+/* WordPress 兼容樣式 - 限制作用域避免影響頁面其他元素 */
         .hsingfu-chatbot-wrapper * {
             margin: 0;
             padding: 0;
