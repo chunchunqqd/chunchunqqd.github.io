@@ -1766,11 +1766,11 @@ showCourseGuide();
                                 <table class="coaching-program-table">
                                     <tr>
                                         <td class="table-label">平日</td>
-                                        <td class="table-price">$1,400</td>
+                                        <td class="table-price">$1,400/人</td>
                                     </tr>
                                     <tr>
                                         <td class="table-label">假日</td>
-                                        <td class="table-price">$1,760</td>
+                                        <td class="table-price">$1,760/人</td>
                                     </tr>
                                 </table>
                                 <div class="coaching-program-notes">
