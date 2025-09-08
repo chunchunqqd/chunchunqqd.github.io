@@ -1740,7 +1740,7 @@ showCourseGuide();
                                 專案介紹
                             </div>
                             <div class="coaching-program-section-content">
-                                提供教練的北區9洞方案，下場時間需事先預約
+                                教練北區9洞方案，須提前預約
                             </div>
                         </div>
                         
