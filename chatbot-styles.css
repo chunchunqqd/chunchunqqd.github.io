@@ -74,7 +74,7 @@
         .hsingfu-chatbot-wrapper .chat-header {
             background: #ffffff;
             color: #2c3e50;
-            padding: 20px 25px;
+            padding: 10px 25px;
             display: flex;
             align-items: center;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
@@ -102,6 +102,7 @@
             font-size: 13px;
             opacity: 0.7;
             font-weight: 300;
+        margin-top: 0px
         }
         
         .hsingfu-chatbot-wrapper .status-indicator {
