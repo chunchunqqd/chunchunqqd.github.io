@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charest "UTF-8"
 /* WordPress 兼容樣式 - 限制作用域避免影響頁面其他元素 */
         .hsingfu-chatbot-wrapper * {
             margin: 0;
@@ -689,6 +689,57 @@
             font-size: 11px;
         }
         
+        /* 教練教學專案表格樣式 */
+        .hsingfu-chatbot-wrapper .coaching-program-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-table tr {
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-table td {
+            padding: 12px 16px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-table .table-label {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+            width: 40%;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-table .table-price {
+            background: white;
+            font-weight: 700;
+            color: #25d366;
+            text-align: right;
+            font-size: 14px;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-notes {
+            margin-top: 8px;
+        }
+        
+        .hsingfu-chatbot-wrapper .coaching-program-notes p {
+            margin: 4px 0;
+            font-size: 12px;
+            color: #6c757d;
+            line-height: 1.4;
+        }
+        
         .hsingfu-chatbot-wrapper .course-guide-title {
             font-size: 18px;
             font-weight: 600;
@@ -847,6 +898,19 @@
                 max-width: 180px;
                 padding: 8px 14px;
                 font-size: 12px;
+            }
+            
+            .hsingfu-chatbot-wrapper .coaching-program-table td {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+            
+            .hsingfu-chatbot-wrapper .coaching-program-table .table-price {
+                font-size: 13px;
+            }
+            
+            .hsingfu-chatbot-wrapper .coaching-program-notes p {
+                font-size: 11px;
             }
         }
         
