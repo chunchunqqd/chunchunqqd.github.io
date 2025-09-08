@@ -644,6 +644,12 @@
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 16px;
+            height: 332px;
+            width: 282px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-y: auto;
+            box-sizing: border-box;
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section {
@@ -899,6 +905,12 @@
             
             .hsingfu-chatbot-wrapper .coaching-program-section-content {
                 font-size: 13px;
+            }
+            
+            .hsingfu-chatbot-wrapper .coaching-program-content {
+                width: 100%;
+                height: auto;
+                max-height: 300px;
             }
             
             .hsingfu-chatbot-wrapper .coaching-program-btn {
