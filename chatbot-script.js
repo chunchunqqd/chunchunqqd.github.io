@@ -1748,7 +1748,7 @@ showCourseGuide();
                         <div class="coaching-program-section">
                             <div class="coaching-program-section-header">
                                 <i class="fas fa-clock"></i>
-                                時間安排
+                                下場時段
                             </div>
                             <div class="coaching-program-section-content">
                                 夏令（5–10 月）：15:00–18:00<br>
