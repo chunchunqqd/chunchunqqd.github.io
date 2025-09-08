@@ -1747,7 +1747,6 @@ showCourseGuide();
                         <!-- 時間安排 -->
                         <div class="coaching-program-section">
                             <div class="coaching-program-section-header">
-                                <i class="fas fa-clock"></i>
                                 下場時段
                             </div>
                             <div class="coaching-program-section-content">
@@ -1759,7 +1758,6 @@ showCourseGuide();
                         <!-- 收費標準 -->
                         <div class="coaching-program-section">
                             <div class="coaching-program-section-header">
-                                <i class="fas fa-dollar-sign"></i>
                                 收費標準
                             </div>
                             <div class="coaching-program-section-content">
