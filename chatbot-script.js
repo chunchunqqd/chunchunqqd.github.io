@@ -1369,11 +1369,19 @@ showCourseGuide();
             
             // 重置輪播狀態
             currentSlide = 0;
+            carousel.dataset.currentSlide = '0';
+            
+            // 確保輪播容器有正確的樣式
+            carousel.style.position = 'relative';
+            carousel.style.overflow = 'hidden';
             
             // 智能創建輪播點
             createSmartDots(carouselId);
             
-            updateCarousel(carouselId);
+            // 使用 setTimeout 確保 DOM 完全渲染後再更新
+            setTimeout(() => {
+                updateCarousel(carouselId);
+            }, 50);
         }
         
         // 移動輪播
@@ -1396,6 +1404,7 @@ showCourseGuide();
             let currentSlideForThisCarousel = parseInt(carousel.dataset.currentSlide) || 0;
             currentSlideForThisCarousel += direction;
             
+            // 處理邊界循環
             if (currentSlideForThisCarousel < 0) {
                 currentSlideForThisCarousel = items.length - 1;
             } else if (currentSlideForThisCarousel >= items.length) {
@@ -1405,7 +1414,10 @@ showCourseGuide();
             // 保存當前輪播的slide狀態
             carousel.dataset.currentSlide = currentSlideForThisCarousel;
             
-            updateCarousel(carousel.id, currentSlideForThisCarousel);
+            // 使用 setTimeout 確保 DOM 更新完成後再執行
+            setTimeout(() => {
+                updateCarousel(carousel.id, currentSlideForThisCarousel);
+            }, 10);
         }
         
         // 跳转到特定幻灯片
@@ -1421,9 +1433,19 @@ showCourseGuide();
             
             if (!carousel) return;
             
+            const items = carousel.querySelectorAll('.carousel-item');
+            if (items.length === 0) return;
+            
+            // 確保索引在有效範圍內
+            const validIndex = Math.max(0, Math.min(index, items.length - 1));
+            
             // 保存當前輪播的slide狀態
-            carousel.dataset.currentSlide = index;
-            updateCarousel(carousel.id, index);
+            carousel.dataset.currentSlide = validIndex;
+            
+            // 使用 setTimeout 確保 DOM 更新完成後再執行
+            setTimeout(() => {
+                updateCarousel(carousel.id, validIndex);
+            }, 10);
         }
         
         // 更新轮播显示
@@ -1449,8 +1471,17 @@ showCourseGuide();
             // 使用傳入的slideIndex，如果沒有則使用輪播自己的狀態
             const currentSlideForThisCarousel = slideIndex !== null ? slideIndex : (parseInt(carousel.dataset.currentSlide) || 0);
             
-            // 計算滾動位置
-            const scrollPosition = items[currentSlideForThisCarousel].offsetLeft - carousel.offsetLeft;
+            // 確保索引在有效範圍內
+            const validIndex = Math.max(0, Math.min(currentSlideForThisCarousel, items.length - 1));
+            
+            // 計算滾動位置 - 使用更精確的計算方式
+            let scrollPosition = 0;
+            for (let i = 0; i < validIndex; i++) {
+                const item = items[i];
+                if (item) {
+                    scrollPosition += item.offsetWidth + 3; // 3px gap
+                }
+            }
             
             carousel.scrollTo({
                 left: scrollPosition,
@@ -1459,7 +1490,7 @@ showCourseGuide();
             
             // 更新指示點
             dots.forEach((dot, index) => {
-                if (index === currentSlideForThisCarousel) {
+                if (index === validIndex) {
                     dot.classList.add('active');
                 } else {
                     dot.classList.remove('active');
@@ -1476,8 +1507,8 @@ showCourseGuide();
             
             // 更新箭頭狀態
             const maxSlide = Math.max(0, items.length - visibleCount);
-            if (leftArrow) leftArrow.style.opacity = currentSlideForThisCarousel === 0 ? '0.5' : '1';
-            if (rightArrow) rightArrow.style.opacity = currentSlideForThisCarousel >= maxSlide ? '0.5' : '1';
+            if (leftArrow) leftArrow.style.opacity = validIndex === 0 ? '0.5' : '1';
+            if (rightArrow) rightArrow.style.opacity = validIndex >= maxSlide ? '0.5' : '1';
         }
         
         // 預約功能
@@ -1746,7 +1777,8 @@ showCourseGuide();
                         <!-- 時間安排 -->
                         <div class="coaching-program-section">
                             <div class="coaching-program-section-header">
-                                下場時段
+                                <i class="fas fa-clock"></i>
+                                時間安排
                             </div>
                             <div class="coaching-program-section-content">
                                 夏令（5–10 月）：15:00–18:00<br>
@@ -1757,6 +1789,7 @@ showCourseGuide();
                         <!-- 收費標準 -->
                         <div class="coaching-program-section">
                             <div class="coaching-program-section-header">
+                                <i class="fas fa-dollar-sign"></i>
                                 收費標準
                             </div>
                             <div class="coaching-program-section-content">
