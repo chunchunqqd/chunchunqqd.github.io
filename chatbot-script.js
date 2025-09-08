@@ -1727,7 +1727,6 @@ showCourseGuide();
                 <div class="coaching-program-card">
                     <div class="coaching-program-header">
                         <h3 class="coaching-program-title">
-                            <i class="fas fa-golf-ball-tee"></i>
                             幸福 9 洞教練教學方案
                         </h3>
                     </div>
