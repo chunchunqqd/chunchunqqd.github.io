@@ -289,6 +289,7 @@
             margin: 15px 0;
             width: 100%;
             max-width: 100%;
+            align-self: stretch;
         }
         
         .hsingfu-chatbot-wrapper .carousel-container {
@@ -300,6 +301,8 @@
             gap: 3px;
             margin-bottom: 15px;
             scroll-behavior: smooth;
+            width: 100%;
+            align-self: stretch;
         }
         
         .carousel-container::-webkit-scrollbar {
@@ -317,6 +320,7 @@
             border: 1px solid #f0f0f0;
             overflow: hidden;
             transition: all 0.3s ease;
+            align-self: flex-start;
         }
         
         /* 咖啡吧菜單專用樣式 - 根據原始尺寸 903.111mm x 643.114mm 調整比例 */
@@ -396,6 +400,8 @@
             align-items: center;
             gap: 15px;
             margin-top: 15px;
+            width: 100%;
+            align-self: stretch;
         }
         
         .carousel-dots {
