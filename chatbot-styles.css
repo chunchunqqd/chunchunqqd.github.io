@@ -80,6 +80,7 @@
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             z-index: 10;
             border-bottom: 1px solid #eaeaea;
+            height: 60px;
         }
         
         .hsingfu-chatbot-wrapper .chat-header img {
