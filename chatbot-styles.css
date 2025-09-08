@@ -1,4 +1,4 @@
-@charest "UTF-8"
+@charest "UFT-8"
 /* WordPress 兼容樣式 - 限制作用域避免影響頁面其他元素 */
         .hsingfu-chatbot-wrapper * {
             margin: 0;
@@ -602,7 +602,7 @@
             margin: 12px 0;
             box-shadow: none;
             border: none;
-            max-width: 430px;
+            max-width: 500px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -636,8 +636,6 @@
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 16px;
-                width: 250px;
-                height: 300px;
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section {
@@ -727,7 +725,7 @@
             background: white;
             font-weight: 700;
             color: #25d366;
-            text-align: right;
+            text-align: center;
             font-size: 14px;
         }
         
