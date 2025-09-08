@@ -1378,10 +1378,7 @@ showCourseGuide();
             // 智能創建輪播點
             createSmartDots(carouselId);
             
-            // 使用 setTimeout 確保 DOM 完全渲染後再更新
-            setTimeout(() => {
-                updateCarousel(carouselId);
-            }, 50);
+            updateCarousel(carouselId);
         }
         
         // 移動輪播
@@ -1414,10 +1411,7 @@ showCourseGuide();
             // 保存當前輪播的slide狀態
             carousel.dataset.currentSlide = currentSlideForThisCarousel;
             
-            // 使用 setTimeout 確保 DOM 更新完成後再執行
-            setTimeout(() => {
-                updateCarousel(carousel.id, currentSlideForThisCarousel);
-            }, 10);
+            updateCarousel(carousel.id, currentSlideForThisCarousel);
         }
         
         // 跳转到特定幻灯片
@@ -1442,10 +1436,7 @@ showCourseGuide();
             // 保存當前輪播的slide狀態
             carousel.dataset.currentSlide = validIndex;
             
-            // 使用 setTimeout 確保 DOM 更新完成後再執行
-            setTimeout(() => {
-                updateCarousel(carousel.id, validIndex);
-            }, 10);
+            updateCarousel(carousel.id, validIndex);
         }
         
         // 更新轮播显示
@@ -1474,14 +1465,8 @@ showCourseGuide();
             // 確保索引在有效範圍內
             const validIndex = Math.max(0, Math.min(currentSlideForThisCarousel, items.length - 1));
             
-            // 計算滾動位置 - 使用更精確的計算方式
-            let scrollPosition = 0;
-            for (let i = 0; i < validIndex; i++) {
-                const item = items[i];
-                if (item) {
-                    scrollPosition += item.offsetWidth + 3; // 3px gap
-                }
-            }
+            // 計算滾動位置 - 使用原始的 offsetLeft 方式
+            const scrollPosition = items[validIndex].offsetLeft - carousel.offsetLeft;
             
             carousel.scrollTo({
                 left: scrollPosition,
