@@ -669,58 +669,6 @@
             line-height: 1.4;
         }
         
-        /* 專案介紹項目樣式 */
-        .hsingfu-chatbot-wrapper .coaching-program-info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            padding: 6px 0;
-        }
-        
-        .hsingfu-chatbot-wrapper .coaching-program-info-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .hsingfu-chatbot-wrapper .info-label {
-            font-weight: 600;
-            color: #2c3e50;
-            min-width: 80px;
-            margin-right: 8px;
-        }
-        
-        .hsingfu-chatbot-wrapper .info-text {
-            color: #2c3e50;
-            flex: 1;
-        }
-        
-        /* 時間安排項目樣式 */
-        .hsingfu-chatbot-wrapper .coaching-program-time-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 12px;
-            margin-bottom: 6px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            border-left: 3px solid #25d366;
-        }
-        
-        .hsingfu-chatbot-wrapper .coaching-program-time-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .hsingfu-chatbot-wrapper .time-period {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 13px;
-        }
-        
-        .hsingfu-chatbot-wrapper .time-schedule {
-            color: #25d366;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
         .hsingfu-chatbot-wrapper .coaching-program-btn {
             background: #25d366;
             color: white;
@@ -973,39 +921,6 @@
             
             .hsingfu-chatbot-wrapper .coaching-program-notes p {
                 font-size: 11px;
-            }
-            
-            /* 響應式：專案介紹和時間安排 */
-            .hsingfu-chatbot-wrapper .coaching-program-info-item {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 4px 0;
-            }
-            
-            .hsingfu-chatbot-wrapper .info-label {
-                min-width: auto;
-                margin-right: 0;
-                margin-bottom: 2px;
-                font-size: 12px;
-            }
-            
-            .hsingfu-chatbot-wrapper .info-text {
-                font-size: 12px;
-            }
-            
-            .hsingfu-chatbot-wrapper .coaching-program-time-item {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 6px 10px;
-            }
-            
-            .hsingfu-chatbot-wrapper .time-period {
-                font-size: 12px;
-                margin-bottom: 2px;
-            }
-            
-            .hsingfu-chatbot-wrapper .time-schedule {
-                font-size: 13px;
             }
         }
         
