@@ -157,6 +157,20 @@
             align-items: center;
         }
         
+        /* 輪播在 bot-message 中的特殊處理 */
+        .hsingfu-chatbot-wrapper .bot-message .carousel-wrapper,
+        .hsingfu-chatbot-wrapper .bot-message .menu-carousel-wrapper,
+        .hsingfu-chatbot-wrapper .bot-message .fee-carousel-wrapper {
+            align-self: stretch;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .hsingfu-chatbot-wrapper .bot-message .carousel-container {
+            align-self: stretch;
+            width: 100%;
+        }
+        
         .hsingfu-chatbot-wrapper .user-message {
             align-self: flex-end;
             background: #2c3e50;
@@ -290,6 +304,7 @@
             width: 100%;
             max-width: 100%;
             align-self: stretch;
+            display: block;
         }
         
         .hsingfu-chatbot-wrapper .carousel-container {
@@ -303,6 +318,7 @@
             scroll-behavior: smooth;
             width: 100%;
             align-self: stretch;
+            position: relative;
         }
         
         .carousel-container::-webkit-scrollbar {
@@ -321,6 +337,8 @@
             overflow: hidden;
             transition: all 0.3s ease;
             align-self: flex-start;
+            position: relative;
+            box-sizing: border-box;
         }
         
         /* 咖啡吧菜單專用樣式 - 根據原始尺寸 903.111mm x 643.114mm 調整比例 */
@@ -402,11 +420,13 @@
             margin-top: 15px;
             width: 100%;
             align-self: stretch;
+            position: relative;
         }
         
         .carousel-dots {
             display: flex;
             gap: 10px;
+            flex-shrink: 0;
         }
         
         .carousel-dot {
@@ -434,6 +454,7 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.3s;
+            flex-shrink: 0;
         }
         
         .carousel-arrow:hover {
