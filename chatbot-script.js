@@ -1755,14 +1755,7 @@ showCourseGuide();
                                 專案介紹
                             </div>
                             <div class="coaching-program-section-content">
-                                <div class="coaching-program-info-item">
-                                    <span class="info-label">方案內容：</span>
-                                    <span class="info-text">教練北區9洞方案</span>
-                                </div>
-                                <div class="coaching-program-info-item">
-                                    <span class="info-label">預約方式：</span>
-                                    <span class="info-text">須提前預約</span>
-                                </div>
+                                教練北區9洞方案，須提前預約
                             </div>
                         </div>
                         
@@ -1773,14 +1766,8 @@ showCourseGuide();
                                 時間安排
                             </div>
                             <div class="coaching-program-section-content">
-                                <div class="coaching-program-time-item">
-                                    <div class="time-period">夏令（5–10 月）</div>
-                                    <div class="time-schedule">15:00–18:00</div>
-                                </div>
-                                <div class="coaching-program-time-item">
-                                    <div class="time-period">冬令（11–4 月）</div>
-                                    <div class="time-schedule">14:00–17:00</div>
-                                </div>
+                                夏令（5–10 月）：15:00–18:00<br>
+                                冬令（11–4 月）：14:00–17:00
                             </div>
                         </div>
                         
