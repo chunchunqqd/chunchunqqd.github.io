@@ -1061,8 +1061,10 @@
                             showPromotions();
                         } else if (userMessage.includes('教練') || userMessage.includes('教學') || userMessage.includes('下場') || userMessage.includes('九洞') || userMessage.includes('9洞') || userMessage.includes('教練教學') || userMessage.includes('教練帶學員')) {
                             showCoachingProgram();
+                        } else if (userMessage.includes('球具') || userMessage.includes('租用') || userMessage.includes('租借') || userMessage.includes('球桿') || userMessage.includes('球具租用') || userMessage.includes('球具租借') || userMessage.includes('沒有球桿') || userMessage.includes('沒帶球桿')) {
+                            showEquipmentRental();
                         } else if (userMessage.includes('球道') || userMessage.includes('攻略') || userMessage.includes('球場') || userMessage.includes('東區') || userMessage.includes('西區') || userMessage.includes('北區')) {
-showCourseGuide();
+                            showCourseGuide();
                         } else if (userMessage.includes('預約') || userMessage.includes('訂場')) {
                             addMessage(`
                                 <div class="reservation-card">
@@ -1120,11 +1122,11 @@ showCourseGuide();
                         } else if (userMessage.includes('球隊') || userMessage.includes('團體')) {
                             showFeeCategory('team');
                         } else {
-                            addMessage(`我理解您的問題，但可能需要更多資訊來提供準確的協助。<br><br>您可以詢問：<br><br>• 擊球費用相關問題<br>• 預約服務<br>• 餐廳資訊<br>• 交通資訊<br>• 天氣資訊<br>• 設施介紹<br>• 優惠活動<br><br>或者請提供更具體的問題描述。`, 'bot');
+                            addMessage(`我理解您的問題，但可能需要更多資訊來提供準確的協助。<br><br>您可以詢問：<br><br>• 擊球費用相關問題<br>• 預約服務<br>• 餐廳資訊<br>• 交通資訊<br>• 天氣資訊<br>• 設施介紹<br>• 優惠活動<br>• 球具租用<br><br>或者請提供更具體的問題描述。`, 'bot');
                         }
                     } else {
                         // 如果找不到用戶訊息，提供預設回應
-                        addMessage(`您好！我是幸福高爾夫俱樂部的智能客服。<br><br>我可以協助您了解：<br>• 擊球費用相關問題<br>• 預約服務<br>• 餐廳資訊<br>• 交通資訊<br>• 天氣資訊<br>• 設施介紹<br>• 優惠活動<br><br>請輸入您的問題，我會盡力協助您！`, 'bot');
+                        addMessage(`您好！我是幸福高爾夫俱樂部的智能客服。<br><br>我可以協助您了解：<br>• 擊球費用相關問題<br>• 預約服務<br>• 餐廳資訊<br>• 交通資訊<br>• 天氣資訊<br>• 設施介紹<br>• 優惠活動<br>• 球具租用<br><br>請輸入您的問題，我會盡力協助您！`, 'bot');
                     }
                 } catch (error) {
                     console.error('生成回應時發生錯誤:', error);
@@ -1701,6 +1703,63 @@ showCourseGuide();
                             </div>
                         </div>
                     </div>
+                </div>
+            `, 'bot');
+        }
+        
+        // 顯示球具租用資訊
+        function showEquipmentRental() {
+            addMessage(`
+                <div class="equipment-rental-card">
+                    <div class="equipment-rental-header">
+                        <h3 class="equipment-rental-title">
+                            <i class="fas fa-golf-ball-tee"></i>
+                            球具租用服務
+                        </h3>
+                    </div>
+                    
+                    <div class="equipment-rental-content">
+                        <!-- 租用資訊 -->
+                        <div class="equipment-rental-section">
+                            <div class="equipment-rental-section-header">
+                                <i class="fas fa-info-circle"></i>
+                                租用資訊
+                            </div>
+                            <div class="equipment-rental-section-content">
+                                幸福球場有提供球具租用服務
+                            </div>
+                        </div>
+                        
+                        <!-- 收費標準 -->
+                        <div class="equipment-rental-section">
+                            <div class="equipment-rental-section-header">
+                                <i class="fas fa-dollar-sign"></i>
+                                收費標準
+                            </div>
+                            <div class="equipment-rental-section-content">
+                                <div class="equipment-rental-price">
+                                    $1,500元/套
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 注意事項 -->
+                        <div class="equipment-rental-section">
+                            <div class="equipment-rental-section-header">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                注意事項
+                            </div>
+                            <div class="equipment-rental-section-content">
+                                • 如需租用請與專人詢問所需套數<br>
+                                • 不提供高爾夫鞋出租
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="showReservation()" class="equipment-rental-btn">
+                        <i class="fas fa-phone"></i>
+                        專人服務
+                    </button>
                 </div>
             `, 'bot');
         }
