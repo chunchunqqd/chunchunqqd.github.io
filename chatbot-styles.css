@@ -652,14 +652,11 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+            gap: 4px;
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section {
-            margin-bottom: 4px;
-        }
-        
-        .hsingfu-chatbot-wrapper .coaching-program-section:last-child {
             margin-bottom: 0;
         }
         
@@ -800,14 +797,11 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+            gap: 4px;
         }
         
         .hsingfu-chatbot-wrapper .equipment-rental-section {
-            margin-bottom: 4px;
-        }
-        
-        .hsingfu-chatbot-wrapper .equipment-rental-section:last-child {
             margin-bottom: 0;
         }
         
