@@ -656,7 +656,7 @@
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section:last-child {
@@ -667,7 +667,7 @@
             font-size: 13px;
             font-weight: 600;
             color: #2c3e50;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
         
         .hsingfu-chatbot-wrapper .coaching-program-section-content {
@@ -804,7 +804,7 @@
         }
         
         .hsingfu-chatbot-wrapper .equipment-rental-section {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         
         .hsingfu-chatbot-wrapper .equipment-rental-section:last-child {
@@ -815,7 +815,7 @@
             font-size: 13px;
             font-weight: 600;
             color: #2c3e50;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             display: flex;
             align-items: center;
             gap: 6px;
